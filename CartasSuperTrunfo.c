@@ -3,6 +3,7 @@
 int main() {
 
  printf("desafio super trunfo\n\n");
+ 
  printf("digite informções da primeira carta\n\n");
 
 char estado[20];
