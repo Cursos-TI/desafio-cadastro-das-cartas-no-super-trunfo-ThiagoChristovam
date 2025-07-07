@@ -13,6 +13,8 @@ int população;
 float area;
 float PIB;
 int numero_ponto_turistico;
+float densidade_populacional;
+float PIB_per_capital;
 
 printf("digite estado: \n");
 scanf("%s", estado);
@@ -35,13 +37,20 @@ scanf("%f", &PIB);
 printf("digite numero ponto turistico: \n");
 scanf("%d", &numero_ponto_turistico);
 
+//calculo divisão população /area = densidade populacional
+densidade_populacional = (float)população / area;
+//calculo  divisão PIB / populacão = PIB per capital
+PIB_per_capital = (float)PIB / população;
+
 printf("nome do estado: %s\n",estado);
 printf("codigo da carta: %s\n",codigo_da_carta);
 printf("nome da cidade: %s\n",nome_da_cidade);
 printf("numero da população: %d\n",população);
-printf("area: %f\n",area);
+printf("area: %f hab/km²\n",area);
 printf("PIB: %f\n",PIB);
-printf("numero de ponto turistico: %d\n\n",numero_ponto_turistico);
+printf("numero de ponto turistico: %d\n",numero_ponto_turistico);
+printf("densidade populacional: %f hab/km²\n",densidade_populacional);
+printf("PIB per capital: %f\n\n",PIB_per_capital);
 
 printf("agora digite informações da carta 2\n\n");
 
@@ -52,6 +61,8 @@ int população2;
 float area2;
 float PIB2;
 int numero_ponto_turistico2;
+float densidade_populacional2;
+float PIB_per_capital2;
 
 printf("digite estado: \n");
 scanf("%s", estado2);
@@ -74,6 +85,11 @@ scanf("%f", &PIB2);
 printf("digite numero ponto turistico: \n");
 scanf("%d", &numero_ponto_turistico2);
 
+//calculo divisão população /area = densidade populacional
+densidade_populacional2 = (float)população2 / area2;
+//calculo  divisão PIB / populacão = PIB per capital
+PIB_per_capital2 = (float)PIB2 / população2;
+
 printf("nome do estado: %s\n",estado2);
 printf("codigo da carta: %s\n",codigo_da_carta2);
 printf("nome da cidade: %s\n",nome_da_cidade2);
@@ -81,7 +97,8 @@ printf("numero da população: %d\n",população2);
 printf("area: %f\n",area2);
 printf("PIB: %f\n",PIB2);
 printf("numero de ponto turistico: %d\n",numero_ponto_turistico2);
-
+printf("densidade populacional: %f hab/km²\n",densidade_populacional2);
+printf("PIB per capital: %f\n",PIB_per_capital2);
 
     return 0;
 }
